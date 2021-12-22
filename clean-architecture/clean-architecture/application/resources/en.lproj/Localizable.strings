@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  clean-architecture
+
+  Created by Jaime Aranaz on 22/12/2021.
+  
+*/
+
+"welcome" = "Welcome view controller";
+"next" = "Next";

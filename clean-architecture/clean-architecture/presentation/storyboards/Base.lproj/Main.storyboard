@@ -22,18 +22,41 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem ipsum dolor sic amet" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WeC-f8-9jX">
+                                <rect key="frame" x="20" y="477" width="374" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="374" id="O6o-xR-Wt1"/>
+                                    <constraint firstAttribute="height" constant="35" id="PHK-tE-GnR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DIg-th-60Q">
+                                <rect key="frame" x="191" y="832" width="32" height="30"/>
+                                <state key="normal" title="Next"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="DIg-th-60Q" secondAttribute="bottom" id="BlG-Vi-CW0"/>
                             <constraint firstItem="8Vh-7O-4QC" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="FoB-4W-w2V"/>
+                            <constraint firstItem="WeC-f8-9jX" firstAttribute="centerX" secondItem="8Vh-7O-4QC" secondAttribute="centerX" id="I0F-t0-Sph"/>
                             <constraint firstItem="8Vh-7O-4QC" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="Qlk-0N-UvL"/>
+                            <constraint firstItem="DIg-th-60Q" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Z6o-vk-uSA"/>
+                            <constraint firstItem="WeC-f8-9jX" firstAttribute="top" secondItem="8Vh-7O-4QC" secondAttribute="bottom" constant="13.5" id="ke9-bg-a2E"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="WeC-f8-9jX" id="qnR-wa-fbX"/>
+                        <outlet property="nextButton" destination="DIg-th-60Q" id="cRq-fa-FfO"/>
+                        <outlet property="titleLabel" destination="8Vh-7O-4QC" id="Obc-bf-luy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-213" y="119"/>
+            <point key="canvasLocation" x="-213.04347826086959" y="118.52678571428571"/>
         </scene>
     </scenes>
     <resources>
