@@ -35,4 +35,8 @@ class WelcomeViewController: BaseViewController {
     override func customization() {
         descriptionLabel.text = ""
     }
+    
+    @IBAction func didSelectNext(_ sender: Any) {
+            performSegue(withIdentifier: secondSegue, sender: self)
+    }
 }

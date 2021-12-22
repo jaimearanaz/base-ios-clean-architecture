@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		033A77E5659D7E80D87691C1 /* Pods_clean_architecture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 709B4B9CEC8060D956D4C058 /* Pods_clean_architecture.framework */; };
+		6F0689882773A4BC00C13542 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F0689872773A4BC00C13542 /* SecondViewController.swift */; };
+		6F06898E2773A4D600C13542 /* SecondViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F06898D2773A4D600C13542 /* SecondViewModel.swift */; };
+		6F0689992773A4F000C13542 /* SecondRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F0689982773A4F000C13542 /* SecondRouter.swift */; };
+		6F06899E2773A59C00C13542 /* SecondDI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F06899D2773A59C00C13542 /* SecondDI.swift */; };
+		6F0689A92773A94400C13542 /* FooUi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F0689A82773A94400C13542 /* FooUi.swift */; };
+		6F0689AE2773A97400C13542 /* Foo+Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F0689AD2773A97400C13542 /* Foo+Mapper.swift */; };
 		6F80AE8627733CD000DD1D24 /* FooEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F80AE8527733CD000DD1D24 /* FooEntity.swift */; };
 		6F80AE8B2773759400DD1D24 /* NetworkRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F80AE8A2773759400DD1D24 /* NetworkRepositoryProtocol.swift */; };
 		6F80AE952773776C00DD1D24 /* NetworkRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F80AE942773776C00DD1D24 /* NetworkRepository.swift */; };
@@ -37,7 +43,6 @@
 		6F8A971127723763002D77E2 /* WelcomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8A971027723763002D77E2 /* WelcomeRouter.swift */; };
 		6F8A972427723AC5002D77E2 /* WelcomeDI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8A972327723AC5002D77E2 /* WelcomeDI.swift */; };
 		6F8A972927723B9A002D77E2 /* DefaultAnalytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8A972827723B9A002D77E2 /* DefaultAnalytics.swift */; };
-		6F8A972E27723C92002D77E2 /* OneDI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8A972D27723C92002D77E2 /* OneDI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +64,12 @@
 
 /* Begin PBXFileReference section */
 		008679A017D4ADB0BF1B2859 /* Pods-clean-architecture.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-clean-architecture.debug.xcconfig"; path = "Target Support Files/Pods-clean-architecture/Pods-clean-architecture.debug.xcconfig"; sourceTree = "<group>"; };
+		6F0689872773A4BC00C13542 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		6F06898D2773A4D600C13542 /* SecondViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewModel.swift; sourceTree = "<group>"; };
+		6F0689982773A4F000C13542 /* SecondRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondRouter.swift; sourceTree = "<group>"; };
+		6F06899D2773A59C00C13542 /* SecondDI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondDI.swift; sourceTree = "<group>"; };
+		6F0689A82773A94400C13542 /* FooUi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooUi.swift; sourceTree = "<group>"; };
+		6F0689AD2773A97400C13542 /* Foo+Mapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Foo+Mapper.swift"; sourceTree = "<group>"; };
 		6F80AE8527733CD000DD1D24 /* FooEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooEntity.swift; sourceTree = "<group>"; };
 		6F80AE8A2773759400DD1D24 /* NetworkRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRepositoryProtocol.swift; sourceTree = "<group>"; };
 		6F80AE942773776C00DD1D24 /* NetworkRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRepository.swift; sourceTree = "<group>"; };
@@ -94,7 +105,6 @@
 		6F8A971027723763002D77E2 /* WelcomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeRouter.swift; sourceTree = "<group>"; };
 		6F8A972327723AC5002D77E2 /* WelcomeDI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeDI.swift; sourceTree = "<group>"; };
 		6F8A972827723B9A002D77E2 /* DefaultAnalytics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultAnalytics.swift; sourceTree = "<group>"; };
-		6F8A972D27723C92002D77E2 /* OneDI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneDI.swift; sourceTree = "<group>"; };
 		709B4B9CEC8060D956D4C058 /* Pods_clean_architecture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_clean_architecture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		72DF08DA9C9EBE28CEA42175 /* Pods-clean-architecture.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-clean-architecture.release.xcconfig"; path = "Target Support Files/Pods-clean-architecture/Pods-clean-architecture.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -140,6 +150,16 @@
 				72DF08DA9C9EBE28CEA42175 /* Pods-clean-architecture.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		6F06898C2773A4C100C13542 /* foo */ = {
+			isa = PBXGroup;
+			children = (
+				6F0689982773A4F000C13542 /* SecondRouter.swift */,
+				6F0689872773A4BC00C13542 /* SecondViewController.swift */,
+				6F06898D2773A4D600C13542 /* SecondViewModel.swift */,
+			);
+			path = foo;
 			sourceTree = "<group>";
 		};
 		6F80AED3277390BA00DD1D24 /* extensions */ = {
@@ -260,7 +280,7 @@
 			children = (
 				6F8A96C32772304B002D77E2 /* DependencyInjector.swift */,
 				6F8A972327723AC5002D77E2 /* WelcomeDI.swift */,
-				6F8A972D27723C92002D77E2 /* OneDI.swift */,
+				6F06899D2773A59C00C13542 /* SecondDI.swift */,
 			);
 			path = di;
 			sourceTree = "<group>";
@@ -279,6 +299,7 @@
 			children = (
 				6F8A96DA27723168002D77E2 /* bases */,
 				6F8A96CD2772309E002D77E2 /* welcome */,
+				6F06898C2773A4C100C13542 /* foo */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -365,6 +386,7 @@
 		6F8A9701277233AA002D77E2 /* mappers */ = {
 			isa = PBXGroup;
 			children = (
+				6F0689AD2773A97400C13542 /* Foo+Mapper.swift */,
 			);
 			path = mappers;
 			sourceTree = "<group>";
@@ -372,6 +394,7 @@
 		6F8A9702277233AF002D77E2 /* models */ = {
 			isa = PBXGroup;
 			children = (
+				6F0689A82773A94400C13542 /* FooUi.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -566,22 +589,27 @@
 				6F8A972927723B9A002D77E2 /* DefaultAnalytics.swift in Sources */,
 				6F80AEAA2773793900DD1D24 /* FooDTO.swift in Sources */,
 				6F80AED5277390D000DD1D24 /* String+Extensions.swift in Sources */,
+				6F0689AE2773A97400C13542 /* Foo+Mapper.swift in Sources */,
 				6F8A96C42772304B002D77E2 /* DependencyInjector.swift in Sources */,
+				6F06898E2773A4D600C13542 /* SecondViewModel.swift in Sources */,
+				6F0689992773A4F000C13542 /* SecondRouter.swift in Sources */,
 				6F80AE952773776C00DD1D24 /* NetworkRepository.swift in Sources */,
 				6F80AE8B2773759400DD1D24 /* NetworkRepositoryProtocol.swift in Sources */,
+				6F06899E2773A59C00C13542 /* SecondDI.swift in Sources */,
 				6F8A96D6277230F7002D77E2 /* WelcomeViewModel.swift in Sources */,
 				6F8A96D1277230D9002D77E2 /* WelcomeViewController.swift in Sources */,
-				6F8A972E27723C92002D77E2 /* OneDI.swift in Sources */,
 				6F8A96DC27723177002D77E2 /* BaseViewModel.swift in Sources */,
 				6F8A971127723763002D77E2 /* WelcomeRouter.swift in Sources */,
 				6F80AE9F277377AF00DD1D24 /* SendSomeData.swift in Sources */,
 				6F8A96EA277231F8002D77E2 /* AnalyticsConstants.swift in Sources */,
 				6F80AE8627733CD000DD1D24 /* FooEntity.swift in Sources */,
 				6F8A9709277233EA002D77E2 /* FooUseCase.swift in Sources */,
+				6F0689882773A4BC00C13542 /* SecondViewController.swift in Sources */,
 				6F80AE9A2773779800DD1D24 /* GetSomeData.swift in Sources */,
 				6F80AEB42773835D00DD1D24 /* Cancellable.swift in Sources */,
 				6F8A96F5277232E9002D77E2 /* BaseViewController.swift in Sources */,
 				6F8A96E2277231D8002D77E2 /* AnalyticsProtocol.swift in Sources */,
+				6F0689A92773A94400C13542 /* FooUi.swift in Sources */,
 				6F8A972427723AC5002D77E2 /* WelcomeDI.swift in Sources */,
 				6F8A96832772297B002D77E2 /* AppDelegate.swift in Sources */,
 				6F8A96852772297B002D77E2 /* SceneDelegate.swift in Sources */,
@@ -771,7 +799,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X7FQ3DUR48;
-				INFOPLIST_FILE = "clean-architecture/application/Info.plist";
+				INFOPLIST_FILE = "clean-architecture/application/resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -791,7 +819,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X7FQ3DUR48;
-				INFOPLIST_FILE = "clean-architecture/application/Info.plist";
+				INFOPLIST_FILE = "clean-architecture/application/resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

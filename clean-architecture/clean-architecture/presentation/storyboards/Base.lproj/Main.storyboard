@@ -35,6 +35,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DIg-th-60Q">
                                 <rect key="frame" x="191" y="832" width="32" height="30"/>
                                 <state key="normal" title="Next"/>
+                                <connections>
+                                    <action selector="didSelectNext:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5Ys-7I-ZPG"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -52,11 +55,40 @@
                         <outlet property="descriptionLabel" destination="WeC-f8-9jX" id="qnR-wa-fbX"/>
                         <outlet property="nextButton" destination="DIg-th-60Q" id="cRq-fa-FfO"/>
                         <outlet property="titleLabel" destination="8Vh-7O-4QC" id="Obc-bf-luy"/>
+                        <segue destination="Ins-Zk-NZh" kind="show" identifier="secondSegue" id="7kt-dd-4pc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-213.04347826086959" y="118.52678571428571"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="iLw-gF-ziJ">
+            <objects>
+                <viewController storyboardIdentifier="SecondViewController" id="Ins-Zk-NZh" customClass="SecondViewController" customModule="clean_architecture" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LSi-oR-x2H">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Second view controller" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HFf-jZ-zq8">
+                                <rect key="frame" x="120" y="393.5" width="174" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="x7o-lh-xV1"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="HFf-jZ-zq8" firstAttribute="centerY" secondItem="x7o-lh-xV1" secondAttribute="centerY" id="AmV-Vq-nz8"/>
+                            <constraint firstItem="HFf-jZ-zq8" firstAttribute="centerX" secondItem="x7o-lh-xV1" secondAttribute="centerX" id="Yy8-ba-mxi"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="n1c-Ls-6kv"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uix-h4-KAf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="917" y="123"/>
         </scene>
     </scenes>
     <resources>

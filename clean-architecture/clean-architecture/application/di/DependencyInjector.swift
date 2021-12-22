@@ -8,6 +8,6 @@
 import Foundation
 import UIKit
 
-class DependencyInjector: WelcomeNavigationFlow {
+class DependencyInjector: WelcomeNavigationFlow, SecondNavigationFlow {
 
 }

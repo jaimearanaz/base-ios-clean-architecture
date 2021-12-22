@@ -15,8 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         initializeThirdParties()
-        initializeBasicActors()
-        
+
         return true
     }
 
@@ -35,19 +34,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     private func initializeThirdParties() {
-        
-    }
-    
-    private func initializeBasicActors() {
-        
-        injector = DependencyInjector()
-    }
-    
-    private func startAppWithInitialViewController() {
-        
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let viewController = storyboard.instantiateViewController(withIdentifier: "WelcomeViewController") as! WelcomeViewController
-        injector?.injectWelcome(viewController: viewController)
+        // Implement here the initialization of 3rd party libraries and frameworks
     }
 }
 

@@ -10,19 +10,19 @@ import UIKit
 
 protocol WelcomeNavigationFlow {
     
-    func injectOne(withSegue segue: UIStoryboardSegue)
+    func injectSecond(withSegue segue: UIStoryboardSegue)
 }
 
 extension WelcomeViewController {
     
-    var oneSegue : String { get { return "oneSegue" } }
+    var secondSegue : String { get { return "secondSegue" } }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     
         switch (segue.identifier) {
         
-        case oneSegue:
-            navigationFlow?.injectOne(withSegue: segue)
+        case secondSegue:
+            navigationFlow?.injectSecond(withSegue: segue)
             
         default:
             break
