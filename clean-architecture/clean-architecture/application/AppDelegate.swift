@@ -10,10 +10,13 @@ import UIKit
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+    private var injector: DependencyInjector?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        initializeThirdParties()
+        initializeBasicActors()
+        
         return true
     }
 
@@ -30,7 +33,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
-
-
+    
+    private func initializeThirdParties() {
+        
+    }
+    
+    private func initializeBasicActors() {
+        
+        injector = DependencyInjector()
+    }
+    
+    private func startAppWithInitialViewController() {
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let viewController = storyboard.instantiateViewController(withIdentifier: "WelcomeViewController") as! WelcomeViewController
+        injector?.injectWelcome(viewController: viewController)
+    }
 }
 
