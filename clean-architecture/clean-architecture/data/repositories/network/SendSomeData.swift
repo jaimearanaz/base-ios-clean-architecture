@@ -6,13 +6,17 @@
 //
 
 import Foundation
+import SwiftyTimer
 
 extension NetworkRepository {
  
     func sendSomeData(data: FooEntity, completion: @escaping (Result<Void, Error>) -> Void) -> Cancellable {
         
-        _ = data.toData()
-        completion(.success(Void()))
+        Timer.after(2) {
+            _ = data.toData()
+            completion(.success(Void()))
+        }
+        
         return DefaultCancellable()
     }
 }
