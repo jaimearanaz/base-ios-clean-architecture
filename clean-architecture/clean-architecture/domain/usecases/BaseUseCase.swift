@@ -7,6 +7,16 @@
 
 import Foundation
 
-protocol BaseUseCase {
+protocol BaseUseCase: Cancellable {
 
+    var cancellables: [Cancellable] { get set }
+}
+
+extension BaseUseCase {
+    
+    func cancel() {
+        
+        // do any additional stuff to cancel the data request
+        cancellables.forEach { $0.cancel() }
+    }
 }

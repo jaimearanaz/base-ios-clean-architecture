@@ -17,7 +17,7 @@ protocol WelcomeViewModelInput: BaseViewModelInput {
 }
 
 protocol WelcomeViewModel: BaseViewModel, WelcomeViewModelOutput, WelcomeViewModelInput {
-
+    
     var fooUseCase: FooUseCase { get set }
 }
 
@@ -31,7 +31,7 @@ class DefaultWelcomeViewModel: BaseViewModel, WelcomeViewModel {
         super.init()
         self.analytics = analytics
     }
-
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -46,17 +46,19 @@ class DefaultWelcomeViewModel: BaseViewModel, WelcomeViewModel {
     
     func fooMethod() {
         
-        fooUseCase.execute(request: FooUseCaseRequest(param1: "", param2: 0),
-                         completion: { result in
-                            
-                            switch result {
-                            
-                            case .success(let entity):
-                                print(entity)
-                            case .failure(let error):
-                                print(error)
-                            }
-                            print("")
-                         })
+        let oneCancellable =
+            fooUseCase.execute(request: FooUseCaseRequest(param1: "", param2: 0),
+                               completion: { result in
+                                
+                                switch result {
+                                
+                                case .success(let entity):
+                                    print(entity)
+                                case .failure(let error):
+                                    print(error)
+                                }
+                                print("")
+                               })
+        cancellables.append(oneCancellable)
     }
 }

@@ -24,8 +24,9 @@ protocol FooUseCase: BaseUseCase {
 }
 
 class DefaultFooUseCase: FooUseCase {
-    
+
     var networkRepository: NetworkRepositoryProtocol
+    var cancellables = [Cancellable]()
     
     init(network: NetworkRepositoryProtocol) {
         self.networkRepository = network;
@@ -33,7 +34,7 @@ class DefaultFooUseCase: FooUseCase {
     
     func execute(request: FooUseCaseRequest, completion: @escaping (Result<FooEntity, Error>) -> Void) -> Cancellable {
 
-        networkRepository.getSomeData(completion: completion)
-        return DefaultCancellable()
+        cancellables.append(networkRepository.getSomeData(completion: completion))
+        return self
     }
 }

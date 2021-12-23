@@ -15,8 +15,10 @@ extension NetworkRepository {
         Timer.after(2) {
             _ = data.toData()
             completion(.success(Void()))
+            self.requests.removeFirst(object: self)
         }
         
-        return DefaultCancellable()
+        requests.append(self)
+        return self
     }
 }

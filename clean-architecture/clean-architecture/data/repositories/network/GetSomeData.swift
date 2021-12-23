@@ -15,8 +15,10 @@ extension NetworkRepository {
         Timer.after(2) {
             let data = FooDTO(param1: "This is my data from source", param2: 0, param3: true)
             completion(.success(data.toDomain()))
+            self.requests.removeFirst(object: self)
         }
         
-        return DefaultCancellable()
+        requests.append(self)
+        return self
     }
 }

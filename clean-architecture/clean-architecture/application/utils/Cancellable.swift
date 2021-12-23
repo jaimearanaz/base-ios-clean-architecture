@@ -11,10 +11,3 @@ protocol Cancellable {
     
     func cancel()
 }
-
-class DefaultCancellable: Cancellable {
-    
-    func cancel() {
-        
-    }
-}

@@ -37,6 +37,12 @@ class BaseViewController: UIViewController, BaseViewControllerProtocol {
         baseViewModel?.viewDidAppear()
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        
+        super.viewWillDisappear(animated)
+        baseViewModel?.viewWillDisappear()
+    }
+    
     func localization() {
         
     }
