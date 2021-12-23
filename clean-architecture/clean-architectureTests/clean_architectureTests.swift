@@ -6,7 +6,7 @@
 //
 
 import XCTest
-@testable import clean_architecture
+@testable import clean_arch
 
 class clean_architectureTests: XCTestCase {
 
@@ -21,6 +21,12 @@ class clean_architectureTests: XCTestCase {
     func testExample() throws {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        
+        // let sut = MyObjectUnderTest()
+        // let expectation = XCTestExpectation(description: String)
+        // sut.asynchMethodToTest( { expectation.fulfill() })
+        // wait(for: [XCTestExpectation], timeout: TimeInterval)
+        // XCTAssertEqual(Equatable, Equatable)
     }
 
     func testPerformanceExample() throws {
