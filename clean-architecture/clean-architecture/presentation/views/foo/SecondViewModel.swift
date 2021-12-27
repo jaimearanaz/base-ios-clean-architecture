@@ -8,11 +8,13 @@
 import Foundation
 
 protocol SecondViewModelOutput: BaseViewModelOutput {
-    
+ 
+    var foo: Box<FooUi> { get set }
 }
 
 protocol SecondViewModelInput: BaseViewModelInput {
-    
+ 
+    func fooMethod()
 }
 
 protocol SecondViewModel: BaseViewModel, SecondViewModelOutput, SecondViewModelInput {
@@ -23,6 +25,7 @@ protocol SecondViewModel: BaseViewModel, SecondViewModelOutput, SecondViewModelI
 class DefaultSecondViewModel: BaseViewModel, SecondViewModel {
     
     var fooUseCase: FooUseCase
+    var foo = Box(FooUi(param1: ""))
     
     init(fooUseCase: FooUseCase, analytics: AnalyticsProtocol) {
         
@@ -30,10 +33,9 @@ class DefaultSecondViewModel: BaseViewModel, SecondViewModel {
         super.init()
         self.analytics = analytics
     }
-    
-    override func viewDidLoad() {
+
+    func fooMethod() {
         
-        super.viewDidLoad()
         let oneCancellable =
             fooUseCase.execute(request: FooUseCaseRequest(param1: "", param2: 0),
                                completion: { result in
@@ -41,7 +43,7 @@ class DefaultSecondViewModel: BaseViewModel, SecondViewModel {
                                 switch result {
                                 
                                 case .success(let entity):
-                                    print(entity)
+                                    self.foo.value = entity.toPresentation()
                                 case .failure(let error):
                                     print(error)
                                 }

@@ -44,6 +44,7 @@
 		6F8A972427723AC5002D77E2 /* WelcomeDI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8A972327723AC5002D77E2 /* WelcomeDI.swift */; };
 		6F8A972927723B9A002D77E2 /* DefaultAnalytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8A972827723B9A002D77E2 /* DefaultAnalytics.swift */; };
 		6FA36FDE2774CC9E00757DB6 /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA36FDD2774CC9E00757DB6 /* Array+Extension.swift */; };
+		6FBBCE222779AAF60049D121 /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FBBCE212779AAF60049D121 /* Box.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +108,7 @@
 		6F8A972327723AC5002D77E2 /* WelcomeDI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeDI.swift; sourceTree = "<group>"; };
 		6F8A972827723B9A002D77E2 /* DefaultAnalytics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultAnalytics.swift; sourceTree = "<group>"; };
 		6FA36FDD2774CC9E00757DB6 /* Array+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
+		6FBBCE212779AAF60049D121 /* Box.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
 		709B4B9CEC8060D956D4C058 /* Pods_clean_architecture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_clean_architecture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		72DF08DA9C9EBE28CEA42175 /* Pods-clean-architecture.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-clean-architecture.release.xcconfig"; path = "Target Support Files/Pods-clean-architecture/Pods-clean-architecture.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -440,6 +442,7 @@
 			isa = PBXGroup;
 			children = (
 				6F80AEB32773835D00DD1D24 /* Cancellable.swift */,
+				6FBBCE212779AAF60049D121 /* Box.swift */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -629,6 +632,7 @@
 				6F06898E2773A4D600C13542 /* SecondViewModel.swift in Sources */,
 				6F0689992773A4F000C13542 /* SecondRouter.swift in Sources */,
 				6F80AE952773776C00DD1D24 /* NetworkRepository.swift in Sources */,
+				6FBBCE222779AAF60049D121 /* Box.swift in Sources */,
 				6F80AE8B2773759400DD1D24 /* NetworkRepositoryProtocol.swift in Sources */,
 				6F06899E2773A59C00C13542 /* SecondDI.swift in Sources */,
 				6F8A96D6277230F7002D77E2 /* WelcomeViewModel.swift in Sources */,

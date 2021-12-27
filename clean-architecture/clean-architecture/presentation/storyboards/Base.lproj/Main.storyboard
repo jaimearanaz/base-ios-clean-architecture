@@ -11,22 +11,21 @@
         <!--Welcome View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="WelcomeViewController" id="BYZ-38-t0r" customClass="WelcomeViewController" customModule="clean_architecture" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WelcomeViewController" id="BYZ-38-t0r" customClass="WelcomeViewController" customModule="clean_arch" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome view controller" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Vh-7O-4QC">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome view controller" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Vh-7O-4QC" userLabel="Title">
                                 <rect key="frame" x="113.5" y="442.5" width="187" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem ipsum dolor sic amet" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WeC-f8-9jX">
-                                <rect key="frame" x="20" y="477" width="374" height="35"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem ipsum dolor sic amet" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WeC-f8-9jX" userLabel="Description">
+                                <rect key="frame" x="20" y="478.5" width="374" height="35"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="374" id="O6o-xR-Wt1"/>
-                                    <constraint firstAttribute="height" constant="35" id="PHK-tE-GnR"/>
+                                    <constraint firstAttribute="height" constant="35" id="Y8z-gf-hDq"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -45,10 +44,11 @@
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="DIg-th-60Q" secondAttribute="bottom" id="BlG-Vi-CW0"/>
                             <constraint firstItem="8Vh-7O-4QC" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="FoB-4W-w2V"/>
-                            <constraint firstItem="WeC-f8-9jX" firstAttribute="centerX" secondItem="8Vh-7O-4QC" secondAttribute="centerX" id="I0F-t0-Sph"/>
                             <constraint firstItem="8Vh-7O-4QC" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="Qlk-0N-UvL"/>
                             <constraint firstItem="DIg-th-60Q" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Z6o-vk-uSA"/>
-                            <constraint firstItem="WeC-f8-9jX" firstAttribute="top" secondItem="8Vh-7O-4QC" secondAttribute="bottom" constant="13.5" id="ke9-bg-a2E"/>
+                            <constraint firstItem="WeC-f8-9jX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="fq8-0O-QBR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WeC-f8-9jX" secondAttribute="trailing" constant="20" id="hGF-H3-yS1"/>
+                            <constraint firstItem="WeC-f8-9jX" firstAttribute="top" secondItem="8Vh-7O-4QC" secondAttribute="bottom" constant="15" id="ke9-bg-a2E"/>
                         </constraints>
                     </view>
                     <connections>
@@ -65,14 +65,24 @@
         <!--Second View Controller-->
         <scene sceneID="iLw-gF-ziJ">
             <objects>
-                <viewController storyboardIdentifier="SecondViewController" id="Ins-Zk-NZh" customClass="SecondViewController" customModule="clean_architecture" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SecondViewController" id="Ins-Zk-NZh" customClass="SecondViewController" customModule="clean_arch" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LSi-oR-x2H">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Second view controller" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HFf-jZ-zq8">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Second view controller" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HFf-jZ-zq8" userLabel="Title">
                                 <rect key="frame" x="120" y="393.5" width="174" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem ipsum dolor sic amet" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uMj-uA-rQc" userLabel="Description">
+                                <rect key="frame" x="20" y="429.5" width="374" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="N3u-7Q-5yM"/>
+                                    <constraint firstAttribute="width" constant="374" id="r9f-Xb-PkS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -81,10 +91,16 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="HFf-jZ-zq8" firstAttribute="centerY" secondItem="x7o-lh-xV1" secondAttribute="centerY" id="AmV-Vq-nz8"/>
+                            <constraint firstItem="uMj-uA-rQc" firstAttribute="top" secondItem="HFf-jZ-zq8" secondAttribute="bottom" constant="15" id="Obl-ji-CRd"/>
                             <constraint firstItem="HFf-jZ-zq8" firstAttribute="centerX" secondItem="x7o-lh-xV1" secondAttribute="centerX" id="Yy8-ba-mxi"/>
+                            <constraint firstItem="uMj-uA-rQc" firstAttribute="leading" secondItem="x7o-lh-xV1" secondAttribute="leading" constant="20" id="ZbB-gn-nAm"/>
+                            <constraint firstItem="x7o-lh-xV1" firstAttribute="trailing" secondItem="uMj-uA-rQc" secondAttribute="trailing" constant="20" id="rS7-Sl-kps"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="n1c-Ls-6kv"/>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="uMj-uA-rQc" id="NuY-c2-R2V"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uix-h4-KAf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

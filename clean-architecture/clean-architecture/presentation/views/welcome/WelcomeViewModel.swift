@@ -9,6 +9,7 @@ import Foundation
 
 protocol WelcomeViewModelOutput: BaseViewModelOutput {
     
+    var foo: Box<FooUi> { get set }
 }
 
 protocol WelcomeViewModelInput: BaseViewModelInput {
@@ -24,6 +25,7 @@ protocol WelcomeViewModel: BaseViewModel, WelcomeViewModelOutput, WelcomeViewMod
 class DefaultWelcomeViewModel: BaseViewModel, WelcomeViewModel {
     
     var fooUseCase: FooUseCase
+    var foo = Box(FooUi(param1: ""))
     
     init(fooUseCase: FooUseCase, analytics: AnalyticsProtocol) {
         
@@ -53,7 +55,7 @@ class DefaultWelcomeViewModel: BaseViewModel, WelcomeViewModel {
                                 switch result {
                                 
                                 case .success(let entity):
-                                    print(entity)
+                                    self.foo.value = entity.toPresentation()
                                 case .failure(let error):
                                     print(error)
                                 }

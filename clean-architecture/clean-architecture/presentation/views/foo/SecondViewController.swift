@@ -10,8 +10,30 @@ import UIKit
 
 class SecondViewController: BaseViewController {
     
+    @IBOutlet weak var descriptionLabel: UILabel!
+    
     var viewModel: SecondViewModel? {
         didSet { baseViewModel = viewModel }
     }
     var navigationFlow: WelcomeNavigationFlow?
+    
+    override func viewDidLoad() {
+        
+        super.viewDidLoad()
+        viewModel?.fooMethod()
+    }
+    
+    override func customization() {
+        
+        super.customization()
+        descriptionLabel.text = ""
+    }
+    
+    override func binds() {
+    
+        super.binds()
+        viewModel?.foo.bindAndFire({ foo in
+            self.descriptionLabel.text = foo.param1
+        })
+    }
 }

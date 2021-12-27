@@ -27,6 +27,7 @@ class BaseViewController: UIViewController, BaseViewControllerProtocol {
         localization()
         customization()
         assertViewModel()
+        binds()
         baseViewModel?.viewDidLoad()
     }
     
@@ -49,6 +50,10 @@ class BaseViewController: UIViewController, BaseViewControllerProtocol {
     
     func customization() {
          
+    }
+    
+    func binds() {
+        
     }
     
     private func assertViewModel() {

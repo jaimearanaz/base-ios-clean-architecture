@@ -12,6 +12,7 @@ class WelcomeViewController: BaseViewController {
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet var refreshButton: UIButton!
     @IBOutlet var nextButton: UIButton!
     
     var viewModel: WelcomeViewModel? {
@@ -24,7 +25,7 @@ class WelcomeViewController: BaseViewController {
         super.viewDidLoad()
         viewModel?.fooMethod()
     }
-    
+
     override func localization() {
         
         super.localization()
@@ -33,9 +34,19 @@ class WelcomeViewController: BaseViewController {
     }
     
     override func customization() {
+        
+        super.customization()
         descriptionLabel.text = ""
     }
     
+    override func binds() {
+    
+        super.binds()
+        viewModel?.foo.bindAndFire({ foo in
+            self.descriptionLabel.text = foo.param1
+        })
+    }
+
     @IBAction func didSelectNext(_ sender: Any) {
             performSegue(withIdentifier: secondSegue, sender: self)
     }
