@@ -45,6 +45,8 @@
 		6F8A972927723B9A002D77E2 /* DefaultAnalytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8A972827723B9A002D77E2 /* DefaultAnalytics.swift */; };
 		6FA36FDE2774CC9E00757DB6 /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA36FDD2774CC9E00757DB6 /* Array+Extension.swift */; };
 		6FBBCE222779AAF60049D121 /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FBBCE212779AAF60049D121 /* Box.swift */; };
+		6FBBCE2A2779C89F0049D121 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FBBCE292779C89E0049D121 /* AppError.swift */; };
+		6FBBCE2F2779C9320049D121 /* DomainError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FBBCE2E2779C9320049D121 /* DomainError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +111,8 @@
 		6F8A972827723B9A002D77E2 /* DefaultAnalytics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultAnalytics.swift; sourceTree = "<group>"; };
 		6FA36FDD2774CC9E00757DB6 /* Array+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
 		6FBBCE212779AAF60049D121 /* Box.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
+		6FBBCE292779C89E0049D121 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
+		6FBBCE2E2779C9320049D121 /* DomainError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainError.swift; sourceTree = "<group>"; };
 		709B4B9CEC8060D956D4C058 /* Pods_clean_architecture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_clean_architecture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		72DF08DA9C9EBE28CEA42175 /* Pods-clean-architecture.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-clean-architecture.release.xcconfig"; path = "Target Support Files/Pods-clean-architecture/Pods-clean-architecture.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -248,6 +252,7 @@
 				6FA36FCF2774994600757DB6 /* utils */,
 				6F8A96822772297B002D77E2 /* AppDelegate.swift */,
 				6F8A96842772297B002D77E2 /* SceneDelegate.swift */,
+				6FBBCE292779C89E0049D121 /* AppError.swift */,
 			);
 			path = application;
 			sourceTree = "<group>";
@@ -258,6 +263,7 @@
 				6F8A96FD2772335C002D77E2 /* models */,
 				6F8A96FC27723352002D77E2 /* repositories */,
 				6F8A96FB27723342002D77E2 /* usecases */,
+				6FBBCE2E2779C9320049D121 /* DomainError.swift */,
 			);
 			path = domain;
 			sourceTree = "<group>";
@@ -635,6 +641,7 @@
 				6FBBCE222779AAF60049D121 /* Box.swift in Sources */,
 				6F80AE8B2773759400DD1D24 /* NetworkRepositoryProtocol.swift in Sources */,
 				6F06899E2773A59C00C13542 /* SecondDI.swift in Sources */,
+				6FBBCE2F2779C9320049D121 /* DomainError.swift in Sources */,
 				6F8A96D6277230F7002D77E2 /* WelcomeViewModel.swift in Sources */,
 				6F8A96D1277230D9002D77E2 /* WelcomeViewController.swift in Sources */,
 				6F8A96DC27723177002D77E2 /* BaseViewModel.swift in Sources */,
@@ -642,6 +649,7 @@
 				6F80AE9F277377AF00DD1D24 /* SendSomeData.swift in Sources */,
 				6F8A96EA277231F8002D77E2 /* AnalyticsConstants.swift in Sources */,
 				6F80AE8627733CD000DD1D24 /* FooEntity.swift in Sources */,
+				6FBBCE2A2779C89F0049D121 /* AppError.swift in Sources */,
 				6F8A9709277233EA002D77E2 /* FooUseCase.swift in Sources */,
 				6F0689882773A4BC00C13542 /* SecondViewController.swift in Sources */,
 				6FA36FDE2774CC9E00757DB6 /* Array+Extension.swift in Sources */,

@@ -53,7 +53,7 @@ class BaseViewController: UIViewController, BaseViewControllerProtocol {
     }
     
     func binds() {
-        
+
     }
     
     private func assertViewModel() {

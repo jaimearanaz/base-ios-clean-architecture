@@ -7,6 +7,13 @@
 
 import Foundation
 
+enum WelcomeStatus: Int {
+    
+    case invalidPassword = 0
+    case userNotFound = 1
+    case userNotActive = 2
+}
+
 protocol WelcomeViewModelOutput: BaseViewModelOutput {
     
     var foo: Box<FooUi> { get set }
@@ -56,11 +63,13 @@ class DefaultWelcomeViewModel: BaseViewModel, WelcomeViewModel {
                                 
                                 case .success(let entity):
                                     self.foo.value = entity.toPresentation()
+                                    self.state.value = BaseViewModelState.success.rawValue
+                                
                                 case .failure(let error):
-                                    print(error)
+                                    self.handleError(error: error)
                                 }
-                                print("")
                                })
+        
         cancellables.append(oneCancellable)
     }
 }

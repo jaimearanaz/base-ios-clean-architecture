@@ -8,3 +8,5 @@
 
 "welcome" = "Welcome view controller";
 "next" = "Next";
+"no_internet" = "No Internet! try later please!";
+"error" = "Error! try again please!";
