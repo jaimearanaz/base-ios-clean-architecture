@@ -15,7 +15,7 @@ def clean_pods
     
 end
 
-target 'clean-architecture' do
+target 'clean-arch' do
     clean_pods
 end
 

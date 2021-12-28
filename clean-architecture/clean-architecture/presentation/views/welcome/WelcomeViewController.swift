@@ -12,7 +12,6 @@ class WelcomeViewController: BaseViewController {
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
-    @IBOutlet var refreshButton: UIButton!
     @IBOutlet var nextButton: UIButton!
     
     var viewModel: WelcomeViewModel? {
@@ -36,6 +35,8 @@ class WelcomeViewController: BaseViewController {
     override func customization() {
         
         super.customization()
+        titleLabel.font = UIFont.bold(withSize: 17)
+        titleLabel.textColor = UIColor.party
         descriptionLabel.text = ""
         nextButton.isEnabled = false
     }

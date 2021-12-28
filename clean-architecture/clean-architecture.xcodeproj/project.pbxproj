@@ -43,10 +43,15 @@
 		6F8A971127723763002D77E2 /* WelcomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8A971027723763002D77E2 /* WelcomeRouter.swift */; };
 		6F8A972427723AC5002D77E2 /* WelcomeDI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8A972327723AC5002D77E2 /* WelcomeDI.swift */; };
 		6F8A972927723B9A002D77E2 /* DefaultAnalytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8A972827723B9A002D77E2 /* DefaultAnalytics.swift */; };
-		6FA36FDE2774CC9E00757DB6 /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA36FDD2774CC9E00757DB6 /* Array+Extension.swift */; };
+		6FA36FDE2774CC9E00757DB6 /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA36FDD2774CC9E00757DB6 /* Array+Extensions.swift */; };
 		6FBBCE222779AAF60049D121 /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FBBCE212779AAF60049D121 /* Box.swift */; };
 		6FBBCE2A2779C89F0049D121 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FBBCE292779C89E0049D121 /* AppError.swift */; };
 		6FBBCE2F2779C9320049D121 /* DomainError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FBBCE2E2779C9320049D121 /* DomainError.swift */; };
+		6FC04262277B03AE00AD902E /* UIFont+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC04261277B03AE00AD902E /* UIFont+Extensions.swift */; };
+		6FC0426D277B03FF00AD902E /* Lato-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6FC0426A277B03FF00AD902E /* Lato-Black.ttf */; };
+		6FC0426E277B03FF00AD902E /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6FC0426B277B03FF00AD902E /* Lato-Bold.ttf */; };
+		6FC0426F277B03FF00AD902E /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6FC0426C277B03FF00AD902E /* Lato-Regular.ttf */; };
+		6FC04277277B067200AD902E /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC04276277B067200AD902E /* UIColor+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,10 +114,15 @@
 		6F8A971027723763002D77E2 /* WelcomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeRouter.swift; sourceTree = "<group>"; };
 		6F8A972327723AC5002D77E2 /* WelcomeDI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeDI.swift; sourceTree = "<group>"; };
 		6F8A972827723B9A002D77E2 /* DefaultAnalytics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultAnalytics.swift; sourceTree = "<group>"; };
-		6FA36FDD2774CC9E00757DB6 /* Array+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
+		6FA36FDD2774CC9E00757DB6 /* Array+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
 		6FBBCE212779AAF60049D121 /* Box.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
 		6FBBCE292779C89E0049D121 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
 		6FBBCE2E2779C9320049D121 /* DomainError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainError.swift; sourceTree = "<group>"; };
+		6FC04261277B03AE00AD902E /* UIFont+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extensions.swift"; sourceTree = "<group>"; };
+		6FC0426A277B03FF00AD902E /* Lato-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Black.ttf"; sourceTree = "<group>"; };
+		6FC0426B277B03FF00AD902E /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Bold.ttf"; sourceTree = "<group>"; };
+		6FC0426C277B03FF00AD902E /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
+		6FC04276277B067200AD902E /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		709B4B9CEC8060D956D4C058 /* Pods_clean_architecture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_clean_architecture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		72DF08DA9C9EBE28CEA42175 /* Pods-clean-architecture.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-clean-architecture.release.xcconfig"; path = "Target Support Files/Pods-clean-architecture/Pods-clean-architecture.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -174,7 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				6F80AED4277390D000DD1D24 /* String+Extensions.swift */,
-				6FA36FDD2774CC9E00757DB6 /* Array+Extension.swift */,
+				6FA36FDD2774CC9E00757DB6 /* Array+Extensions.swift */,
 			);
 			path = extensions;
 			sourceTree = "<group>";
@@ -182,6 +192,7 @@
 		6F80AEDC2773934000DD1D24 /* resources */ = {
 			isa = PBXGroup;
 			children = (
+				6FC04269277B03C700AD902E /* fonts */,
 				6F8A968B2772297C002D77E2 /* Assets.xcassets */,
 				6F8A96902772297C002D77E2 /* Info.plist */,
 				6F80AECF27738FDC00DD1D24 /* Localizable.strings */,
@@ -285,6 +296,7 @@
 				6F8A9702277233AF002D77E2 /* models */,
 				6F8A96CB27723064002D77E2 /* storyboards */,
 				6F8A96CC27723088002D77E2 /* views */,
+				6FC04260277B039400AD902E /* extensions */,
 				6F8A96E0277231C9002D77E2 /* utils */,
 			);
 			path = presentation;
@@ -453,6 +465,25 @@
 			path = utils;
 			sourceTree = "<group>";
 		};
+		6FC04260277B039400AD902E /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				6FC04261277B03AE00AD902E /* UIFont+Extensions.swift */,
+				6FC04276277B067200AD902E /* UIColor+Extensions.swift */,
+			);
+			path = extensions;
+			sourceTree = "<group>";
+		};
+		6FC04269277B03C700AD902E /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				6FC0426A277B03FF00AD902E /* Lato-Black.ttf */,
+				6FC0426B277B03FF00AD902E /* Lato-Bold.ttf */,
+				6FC0426C277B03FF00AD902E /* Lato-Regular.ttf */,
+			);
+			path = fonts;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -559,8 +590,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				6F8A968F2772297C002D77E2 /* LaunchScreen.storyboard in Resources */,
+				6FC0426E277B03FF00AD902E /* Lato-Bold.ttf in Resources */,
 				6F80AECD27738FDC00DD1D24 /* Localizable.strings in Resources */,
 				6F8A968C2772297C002D77E2 /* Assets.xcassets in Resources */,
+				6FC0426F277B03FF00AD902E /* Lato-Regular.ttf in Resources */,
+				6FC0426D277B03FF00AD902E /* Lato-Black.ttf in Resources */,
 				6F8A968A2772297B002D77E2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -638,6 +672,8 @@
 				6F06898E2773A4D600C13542 /* SecondViewModel.swift in Sources */,
 				6F0689992773A4F000C13542 /* SecondRouter.swift in Sources */,
 				6F80AE952773776C00DD1D24 /* NetworkRepository.swift in Sources */,
+				6FC04262277B03AE00AD902E /* UIFont+Extensions.swift in Sources */,
+				6FC04277277B067200AD902E /* UIColor+Extensions.swift in Sources */,
 				6FBBCE222779AAF60049D121 /* Box.swift in Sources */,
 				6F80AE8B2773759400DD1D24 /* NetworkRepositoryProtocol.swift in Sources */,
 				6F06899E2773A59C00C13542 /* SecondDI.swift in Sources */,
@@ -652,7 +688,7 @@
 				6FBBCE2A2779C89F0049D121 /* AppError.swift in Sources */,
 				6F8A9709277233EA002D77E2 /* FooUseCase.swift in Sources */,
 				6F0689882773A4BC00C13542 /* SecondViewController.swift in Sources */,
-				6FA36FDE2774CC9E00757DB6 /* Array+Extension.swift in Sources */,
+				6FA36FDE2774CC9E00757DB6 /* Array+Extensions.swift in Sources */,
 				6F80AE9A2773779800DD1D24 /* GetSomeData.swift in Sources */,
 				6F80AEB42773835D00DD1D24 /* Cancellable.swift in Sources */,
 				6F8A96F5277232E9002D77E2 /* BaseViewController.swift in Sources */,
