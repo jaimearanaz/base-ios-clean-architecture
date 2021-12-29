@@ -8,6 +8,7 @@
 import Foundation
 
 typealias OperationId = Int
+typealias TransitionId = String
 typealias Loading = (operationId: OperationId, isLoading: Bool)
 
 enum BaseViewModelOperation: OperationId {
@@ -20,8 +21,15 @@ enum BaseViewModelError: Error {
     case noInternet(OperationId)
 }
 
+enum BaseViewModelTransition: TransitionId {
+    
+    case toNone = ""
+    case toDismiss
+}
+
 protocol BaseViewModelOutput {
 
+    var transition: Box<TransitionId> { get set }
     var loading: Box<Loading> { get set }
     var result: Box<Result<OperationId, Error>> { get set }
 }
@@ -31,6 +39,8 @@ protocol BaseViewModelInput {
     func viewDidLoad()
     func viewDidAppear()
     func viewWillDisappear()
+    func didSelectBack()
+    func didSelectClose()
 }
 
 protocol BaseViewModelProtocol: BaseViewModelOutput, BaseViewModelInput {
@@ -40,9 +50,10 @@ protocol BaseViewModelProtocol: BaseViewModelOutput, BaseViewModelInput {
 }
 
 class BaseViewModel: BaseViewModelProtocol {
-    
+
     var analytics: AnalyticsProtocol?
     var cancellables = [Cancellable]()
+    var transition = Box(BaseViewModelTransition.toNone.rawValue)
     var loading: Box<Loading> = Box((operationId: 0, isLoading: false))
     var result: Box<Result<OperationId, Error>> = Box(.success(0))
     
@@ -56,5 +67,17 @@ class BaseViewModel: BaseViewModelProtocol {
     
     func viewWillDisappear() {
         cancellables.forEach { $0.cancel() }
+    }
+    
+    func didSelectBack() {
+        dismiss()
+    }
+    
+    func didSelectClose() {
+        dismiss()
+    }
+    
+    func dismiss() {
+        transition.value = BaseViewModelTransition.toDismiss.rawValue
     }
 }

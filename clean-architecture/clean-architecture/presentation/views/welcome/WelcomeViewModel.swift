@@ -15,14 +15,16 @@ enum WelcomeError: Error {
     case notFound(OperationId)
 }
 
+enum WelcomeTransition: TransitionId {
+    case toSecond
+}
+
 protocol WelcomeViewModelOutput: BaseViewModelOutput {
-    
     var foo: Box<FooUi> { get set }
 }
 
 protocol WelcomeViewModelInput: BaseViewModelInput {
-    
-    func fooMethod()
+    func didSelectNext()
 }
 
 protocol WelcomeViewModel: BaseViewModel, WelcomeViewModelOutput, WelcomeViewModelInput {
@@ -31,7 +33,7 @@ protocol WelcomeViewModel: BaseViewModel, WelcomeViewModelOutput, WelcomeViewMod
 }
 
 class DefaultWelcomeViewModel: BaseViewModel, WelcomeViewModel {
-    
+        
     var fooUseCase: FooUseCase
     var foo = Box(FooUi(param1: ""))
     
@@ -46,6 +48,7 @@ class DefaultWelcomeViewModel: BaseViewModel, WelcomeViewModel {
         
         super.viewDidLoad()
         analytics?.logBackgroundWithLastScreen()
+        fooMethod()
     }
     
     override func viewDidAppear() {
@@ -83,5 +86,9 @@ class DefaultWelcomeViewModel: BaseViewModel, WelcomeViewModel {
                                })
         
         cancellables.append(oneCancellable)
+    }
+    
+    func didSelectNext() {
+        transition.value = WelcomeTransition.toSecond.rawValue
     }
 }

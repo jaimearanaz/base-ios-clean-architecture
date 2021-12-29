@@ -61,7 +61,7 @@
                         <outlet property="descriptionLabel" destination="WeC-f8-9jX" id="qnR-wa-fbX"/>
                         <outlet property="nextButton" destination="DIg-th-60Q" id="cRq-fa-FfO"/>
                         <outlet property="titleLabel" destination="8Vh-7O-4QC" id="Obc-bf-luy"/>
-                        <segue destination="Ins-Zk-NZh" kind="show" identifier="secondSegue" id="7kt-dd-4pc"/>
+                        <segue destination="Ins-Zk-NZh" kind="show" identifier="toSecond" id="7kt-dd-4pc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

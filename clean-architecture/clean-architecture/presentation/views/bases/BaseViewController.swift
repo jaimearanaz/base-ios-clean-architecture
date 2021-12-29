@@ -59,7 +59,7 @@ class BaseViewController: UIViewController, BaseViewControllerProtocol {
     func handleError(_ error: Error) {
         // Override in subclass
     }
-    
+       
     func startLoading(operationId: OperationId) {
         // Override in subclass
     }
@@ -89,6 +89,19 @@ class BaseViewController: UIViewController, BaseViewControllerProtocol {
                 self.handleSuccess(operationId: operationId)
             case .failure(let error):
                 self.handleError(error)
+            }
+        })
+        
+        baseViewModel?.transition.bind({ transition in
+            
+            switch transition {
+            
+            case BaseViewModelTransition.toNone.rawValue:
+                break
+            case BaseViewModelTransition.toDismiss.rawValue:
+                self.dismiss(animated: true)
+            default:
+                self.performSegue(withIdentifier: transition, sender: self)
             }
         })
     }

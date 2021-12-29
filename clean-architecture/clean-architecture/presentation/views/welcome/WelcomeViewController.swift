@@ -21,9 +21,7 @@ class WelcomeViewController: BaseViewController {
     var navigationFlow: WelcomeNavigationFlow?
 
     override func viewDidLoad() {
-        
         super.viewDidLoad()
-        viewModel?.fooMethod()
     }
 
     override func localization() {
@@ -80,6 +78,6 @@ class WelcomeViewController: BaseViewController {
     }
 
     @IBAction func didSelectNext(_ sender: Any) {
-        performSegue(withIdentifier: secondSegue, sender: self)
+        viewModel?.didSelectNext()
     }
 }

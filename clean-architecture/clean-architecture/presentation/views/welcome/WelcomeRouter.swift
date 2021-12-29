@@ -14,14 +14,12 @@ protocol WelcomeNavigationFlow {
 }
 
 extension WelcomeViewController {
-    
-    var secondSegue : String { get { return "secondSegue" } }
-    
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     
         switch (segue.identifier) {
         
-        case secondSegue:
+        case WelcomeTransition.toSecond.rawValue:
             navigationFlow?.injectSecond(withSegue: segue)
             
         default:
