@@ -12,6 +12,7 @@ class WelcomeViewController: BaseViewController {
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet var nextButton: UIButton!
     
     var viewModel: WelcomeViewModel? {
@@ -55,6 +56,18 @@ class WelcomeViewController: BaseViewController {
         default:
             self.descriptionLabel.text = "error".localized
         }
+    }
+    
+    override func startLoading(operationId: OperationId) {
+        
+        activityIndicator.isHidden = false
+        activityIndicator.startAnimating()
+    }
+    
+    override func stopLoading(operationId: OperationId) {
+        
+        activityIndicator.stopAnimating()
+        activityIndicator.isHidden = true
     }
     
     override func binds() {

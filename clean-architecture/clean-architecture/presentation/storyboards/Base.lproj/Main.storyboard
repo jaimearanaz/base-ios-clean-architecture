@@ -38,20 +38,26 @@
                                     <action selector="didSelectNext:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5Ys-7I-ZPG"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="ztA-hd-JCS">
+                                <rect key="frame" x="188.5" y="478.5" width="37" height="37"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="DIg-th-60Q" secondAttribute="bottom" id="BlG-Vi-CW0"/>
                             <constraint firstItem="8Vh-7O-4QC" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="FoB-4W-w2V"/>
+                            <constraint firstItem="ztA-hd-JCS" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="OMX-Iv-X9c"/>
                             <constraint firstItem="8Vh-7O-4QC" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="Qlk-0N-UvL"/>
                             <constraint firstItem="DIg-th-60Q" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Z6o-vk-uSA"/>
                             <constraint firstItem="WeC-f8-9jX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="fq8-0O-QBR"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WeC-f8-9jX" secondAttribute="trailing" constant="20" id="hGF-H3-yS1"/>
+                            <constraint firstItem="ztA-hd-JCS" firstAttribute="top" secondItem="8Vh-7O-4QC" secondAttribute="bottom" constant="15" id="hUN-31-B5M"/>
                             <constraint firstItem="WeC-f8-9jX" firstAttribute="top" secondItem="8Vh-7O-4QC" secondAttribute="bottom" constant="15" id="ke9-bg-a2E"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="ztA-hd-JCS" id="d1N-xc-1ai"/>
                         <outlet property="descriptionLabel" destination="WeC-f8-9jX" id="qnR-wa-fbX"/>
                         <outlet property="nextButton" destination="DIg-th-60Q" id="cRq-fa-FfO"/>
                         <outlet property="titleLabel" destination="8Vh-7O-4QC" id="Obc-bf-luy"/>
