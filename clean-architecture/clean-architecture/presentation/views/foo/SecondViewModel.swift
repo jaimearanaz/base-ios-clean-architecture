@@ -36,7 +36,7 @@ class DefaultSecondViewModel: BaseViewModel, SecondViewModel {
 
     func fooMethod() {
         
-        let id = BaseViewModelOperation.anyone.rawValue
+        let id = BaseOperation.anyone.rawValue
         loading.value = (id, true)
         
         let oneCancellable =

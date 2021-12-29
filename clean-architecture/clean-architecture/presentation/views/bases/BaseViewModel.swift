@@ -11,7 +11,7 @@ typealias OperationId = Int
 typealias TransitionId = String
 typealias Loading = (operationId: OperationId, isLoading: Bool)
 
-enum BaseViewModelOperation: OperationId {
+enum BaseOperation: OperationId {
     case anyone = 0
 }
 
@@ -21,7 +21,7 @@ enum BaseViewModelError: Error {
     case noInternet(OperationId)
 }
 
-enum BaseViewModelTransition: TransitionId {
+enum BaseTransition: TransitionId {
     
     case toNone = ""
     case toDismiss
@@ -53,7 +53,7 @@ class BaseViewModel: BaseViewModelProtocol {
 
     var analytics: AnalyticsProtocol?
     var cancellables = [Cancellable]()
-    var transition = Box(BaseViewModelTransition.toNone.rawValue)
+    var transition = Box(BaseTransition.toNone.rawValue)
     var loading: Box<Loading> = Box((operationId: 0, isLoading: false))
     var result: Box<Result<OperationId, Error>> = Box(.success(0))
     
@@ -78,6 +78,6 @@ class BaseViewModel: BaseViewModelProtocol {
     }
     
     func dismiss() {
-        transition.value = BaseViewModelTransition.toDismiss.rawValue
+        transition.value = BaseTransition.toDismiss.rawValue
     }
 }

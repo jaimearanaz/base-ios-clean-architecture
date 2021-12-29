@@ -15,9 +15,7 @@ class WelcomeViewController: BaseViewController {
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet var nextButton: UIButton!
     
-    var viewModel: WelcomeViewModel? {
-        didSet { baseViewModel = viewModel }
-    }
+    var viewModel: WelcomeViewModel? { didSet { baseViewModel = viewModel } }
     var navigationFlow: WelcomeNavigationFlow?
 
     override func viewDidLoad() {

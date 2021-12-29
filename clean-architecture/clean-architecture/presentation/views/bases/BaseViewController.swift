@@ -96,9 +96,9 @@ class BaseViewController: UIViewController, BaseViewControllerProtocol {
             
             switch transition {
             
-            case BaseViewModelTransition.toNone.rawValue:
+            case BaseTransition.toNone.rawValue:
                 break
-            case BaseViewModelTransition.toDismiss.rawValue:
+            case BaseTransition.toDismiss.rawValue:
                 self.dismiss(animated: true)
             default:
                 self.performSegue(withIdentifier: transition, sender: self)
