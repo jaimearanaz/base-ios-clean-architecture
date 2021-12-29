@@ -7,17 +7,23 @@
 
 import Foundation
 
-enum BaseViewModelState: Int {
+typealias OperationId = Int
+typealias Loading = (operationId: OperationId, isLoading: Bool)
+
+enum BaseViewModelOperation: OperationId {
+    case anyone = 0
+}
+
+enum BaseViewModelError: Error {
     
-    case neutral = 1000
-    case success = 1001
-    case error = 1002
-    case noInternet = 1003
+    case unknown(OperationId)
+    case noInternet(OperationId)
 }
 
 protocol BaseViewModelOutput {
 
-    var state: Box<Int> { get set }
+    var loading: Box<Loading> { get set }
+    var result: Box<Result<OperationId, Error>> { get set }
 }
 
 protocol BaseViewModelInput {
@@ -35,25 +41,20 @@ protocol BaseViewModelProtocol: BaseViewModelOutput, BaseViewModelInput {
 
 class BaseViewModel: BaseViewModelProtocol {
     
-    var state = Box(BaseViewModelState.neutral.rawValue)
     var analytics: AnalyticsProtocol?
     var cancellables = [Cancellable]()
+    var loading: Box<Loading> = Box((operationId: 0, isLoading: false))
+    var result: Box<Result<OperationId, Error>> = Box(.success(0))
     
-    func viewDidLoad() { }
+    func viewDidLoad() {
+        // Override in subclass
+    }
     
-    func viewDidAppear() { }
+    func viewDidAppear() {
+        // Override in subclass
+    }
     
     func viewWillDisappear() {
         cancellables.forEach { $0.cancel() }
-    }
-    
-    func handleError(error: Error) {
-        
-        switch error {
-        case AppError.NoConnectionError:
-            self.state.value = BaseViewModelState.noInternet.rawValue
-        default:
-            self.state.value = BaseViewModelState.error.rawValue
-        }
     }
 }

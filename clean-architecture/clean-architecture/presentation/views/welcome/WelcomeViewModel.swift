@@ -7,11 +7,12 @@
 
 import Foundation
 
-enum WelcomeStatus: Int {
-    
-    case invalidPassword = 0
-    case userNotFound = 1
-    case userNotActive = 2
+enum WelcomeOperation: OperationId {
+    case foo = 1000
+}
+
+enum WelcomeError: Error {
+    case notFound(OperationId)
 }
 
 protocol WelcomeViewModelOutput: BaseViewModelOutput {
@@ -55,18 +56,29 @@ class DefaultWelcomeViewModel: BaseViewModel, WelcomeViewModel {
     
     func fooMethod() {
         
+        let id = WelcomeOperation.foo.rawValue
+        loading.value = (id, true)
+        
         let oneCancellable =
             fooUseCase.execute(request: FooUseCaseRequest(param1: "", param2: 0),
                                completion: { result in
+                                
+                                self.loading.value = (id, false)
                                 
                                 switch result {
                                 
                                 case .success(let entity):
                                     self.foo.value = entity.toPresentation()
-                                    self.state.value = BaseViewModelState.success.rawValue
+                                    self.result.value = .success(id)
                                 
                                 case .failure(let error):
-                                    self.handleError(error: error)
+                                    
+                                    switch error {
+                                    case AppError.NoConnectionError:
+                                        self.result.value = .failure(BaseViewModelError.noInternet(id))
+                                    default:
+                                        self.result.value = .failure(BaseViewModelError.unknown(id))
+                                    }
                                 }
                                })
         

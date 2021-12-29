@@ -41,37 +41,32 @@ class WelcomeViewController: BaseViewController {
         nextButton.isEnabled = false
     }
     
+    override func handleSuccess(operationId: OperationId) {
+        nextButton.isEnabled = true
+    }
+    
+    override func handleError(_ error: Error) {
+        
+        nextButton.isEnabled = false
+        
+        switch error {
+        case BaseViewModelError.noInternet( _):
+            self.descriptionLabel.text = "no_internet".localized
+        default:
+            self.descriptionLabel.text = "error".localized
+        }
+    }
+    
     override func binds() {
     
         super.binds()
-        
-        viewModel?.state.bind({ state in
-            if (state == BaseViewModelState.success.rawValue) {
-                self.handleSuccess()
-            } else {
-                self.handleError(error: state)
-            }
-        })
-        
+
         viewModel?.foo.bindAndFire({ foo in
             self.descriptionLabel.text = foo.param1
         })
     }
 
     @IBAction func didSelectNext(_ sender: Any) {
-            performSegue(withIdentifier: secondSegue, sender: self)
-    }
-    
-    private func handleSuccess() {
-        nextButton.isEnabled = true
-    }
-    
-    private func handleError(error: Int) {
-        
-        if (error == BaseViewModelState.noInternet.rawValue) {
-            self.descriptionLabel.text = "no_internet".localized
-        } else {
-            self.descriptionLabel.text = "error".localized
-        }
+        performSegue(withIdentifier: secondSegue, sender: self)
     }
 }

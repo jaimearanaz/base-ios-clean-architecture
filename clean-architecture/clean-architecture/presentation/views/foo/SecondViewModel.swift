@@ -36,18 +36,23 @@ class DefaultSecondViewModel: BaseViewModel, SecondViewModel {
 
     func fooMethod() {
         
+        let id = BaseViewModelOperation.anyone.rawValue
+        loading.value = (id, true)
+        
         let oneCancellable =
             fooUseCase.execute(request: FooUseCaseRequest(param1: "", param2: 0),
                                completion: { result in
                                 
+                                self.loading.value = (id, false)
+                                
                                 switch result {
                                 
-                                case .success(let entity):
-                                    self.foo.value = entity.toPresentation()
+                                case .success(let foo):
+                                    self.foo.value = foo.toPresentation()
+                                    self.result.value = .success(id)
                                 case .failure(let error):
-                                    print(error)
+                                    self.result.value = .failure(error)
                                 }
-                                print("")
                                })
         cancellables.append(oneCancellable)
     }
